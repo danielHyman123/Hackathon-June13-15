@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice to Code</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; background: #f0f0f0; }
+    h1 { color: #333; }
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 1em;
+      font-family: monospace;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎤 Voice to Text Coding</h1>
+  <textarea id="output" placeholder="Your code will appear here..."></textarea><br/>
+  <button id="toggle">Start Listening</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
