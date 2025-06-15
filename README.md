@@ -11,14 +11,6 @@ https://danielhyman123.github.io/Voice-to-website_builder/
 🔄 Live Updates - Website preview updates instantly with voice commands
 🚫 No API Keys - Completely client-side, no external services needed
 
-# Quick Start
-
-Clone or Download the repository
-Open index.html in a modern web browser
-Click "Start Listening"
-Speak your website content using voice commands
-Generate or download your website!
-
 # Voice Commands
 
 CommandExampleResulttitle [text]"title My Amazing Blog"Sets the website titleparagraph [text]"paragraph Welcome to my website"Adds a paragraphheading [text]"heading About Me"Creates a headinglist item [text]"list item First point"Adds a bullet pointlink [text] to [url]"link Google to google.com"Creates a clickable linknew line"new line"Adds a line break
@@ -44,8 +36,20 @@ Option 2: With Express Server
 bash# Install dependencies
 npm install
 
-# Start the server
-npm start or double click index.html in Explorer
+# How to Use it
+
+Open link at top of "ReadMe"
+Click "Start Listening"
+Speak your website content using voice commands
+Generate or download your website!
+
+Or
+
+Clone or Download the repository
+In Terminal, use 'npm start' command or double click index.html in Explorer
+Click "Start Listening"
+Speak your website content using voice commands
+Generate or download your website!
 
 # How It Works
 
