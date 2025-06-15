@@ -14,7 +14,9 @@ if (!SpeechRecognition) {
 
   let isListening = false;
   let finalTranscript = "";
-  let storedTitle = ""; // ✅ declare the missing variable
+  let storedTitle = "";
+  let storedParagraphs = [];
+
 
   // Toggle speech recognition
   toggleBtn.addEventListener("click", () => {
@@ -51,6 +53,7 @@ if (!SpeechRecognition) {
         finalTranscript += transcript + " ";
 
         containsTitle(transcript);
+        containsParagraph(transcript);
       } else {
         interimTranscript += transcript;
       }
@@ -87,8 +90,26 @@ if (!SpeechRecognition) {
     return cleanedTranscript;
   }
 
+  // Check if the transcript uses "paragraph" or "add paragraph"
+  function containsParagraph(transcript) {
+    const regex = /\b(?:paragraph|add paragraph)\b(.*)/i;
+    const match = transcript.match(regex);
+
+    if (match) {
+      const paragraphText = match[1].trim();
+      if (paragraphText) {
+        storedParagraphs.push(paragraphText);
+        console.log("Added Paragraph:", paragraphText);
+        return true;
+      }
+    }
+    return false;
+  }
+
   // Generate a basic website using the title
   function makeWebsite(title) {
+    const paragraphHTML = storedParagraphs.map(p => `<p>${p}</p>`).join("\n");
+    
     const html = `
       <!DOCTYPE html>
       <html lang="en">
@@ -99,6 +120,7 @@ if (!SpeechRecognition) {
       </head>
       <body>
         <h1>${title}</h1>
+        ${paragraphHTML}
         <p>This is a basic website generated with your voice.</p>
       </body>
       </html>
