@@ -1,3 +1,6 @@
+# Link to Platform
+https://danielhyman123.github.io/Hackathon-June13-15/
+
 # Features
 
 🎙️ Voice Recognition - Uses browser's built-in Speech Recognition API
